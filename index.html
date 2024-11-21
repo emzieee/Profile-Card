@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Button that will open the profile card popup -->
+    <a href="javascript:void(0)" class="profile-link" id="openPopup">Open Profile</a>
+  
+  <!-- The Popup -->
+    <div class="popup" id="profilePopup">
+      <div class="profile-card">
+        <img src="Profile_Pic.jpeg" class="profile-img">
+        <h2 class="name"><strong>Emy Joy Fria Brecenio</strong></h2>
+        <p class="github-account">@emzieee</p>
+        <p class="role">Web Developer Beginner</p>
+        <p class="bio"><i>"Great things are not done by impulse, but by a series of small things brought together." — Vincent Van Gogh</i></p>
+           <div class="social-icons">
+             <a href="https://facebook.com/emyjoyfriabrecenio" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/emzieee" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://tiktok.com/emzyjoy_" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://telegram.com/emziezzz" class="social-icon"><i class="fab fa-telegram"></i></a>
+        </div>
+        
+        <button class="close-btn" id="closePopup">Close</button>
+    </div>
+    
+        <script>
+        // Get the elements
+        const openPopupBtn = document.getElementById('openPopup');
+        const closePopupBtn = document.getElementById('closePopup');
+        const popup = document.getElementById('profilePopup');
+
+        // Open the popup
+        openPopupBtn.addEventListener('click', function() {
+            popup.style.display = 'flex';
+        });
+
+        // Close the popup
+        closePopupBtn.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+
+        // Close the popup if the user clicks outside the popup content
+        window.addEventListener('click', function(event) {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
+    
+</body>
+</html>
